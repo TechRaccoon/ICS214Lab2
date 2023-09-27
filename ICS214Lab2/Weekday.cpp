@@ -32,7 +32,7 @@ Weekday calculateWeekday(int month, int dayOfMonth, int year) {
 
     int weekDay{ (dayOfMonth + ((26 * (formulaMonth + 1)) / 10) + yearOfCentury + (yearOfCentury / 4) + (century / 4) + (5 * century)) % 7 };
 
-    switch (weekDay) {
+    /*switch (weekDay) {
     case 1: return Weekday::Saturday;
     case 2: return Weekday::Sunday;
     case 3: return Weekday::Monday;
@@ -40,13 +40,14 @@ Weekday calculateWeekday(int month, int dayOfMonth, int year) {
     case 5: return Weekday::Wednesday;
     case 6: return Weekday::Thursday;
     case 7: return Weekday::Friday;
-    }
+    }*/
+
+    return static_cast<Weekday>(weekDay);
 
 };
 
 std::string getWeekdayName(Weekday day) {
     std::string myArray[] = { "Saturday", "Sunday", "Monday", "Tuesday","Wednesday","Thursday","Friday"};
     return myArray[(int)day];
-    
-
+   
 };
