@@ -33,17 +33,17 @@ Weekday calculateWeekday(int month, int dayOfMonth, int year) {
     int century = { year / 100 };
     int yearOfCentury = { year % 100 };
 
-    int weekDay{ (dayOfMonth + ((26 * (formulaMonth + 1)) / 10) + yearOfCentury + (yearOfCentury / 4) + (century / 4) + (5 * century)) % 7 };
+    int weekDay = { (dayOfMonth + ((26 * (formulaMonth + 1)) / 10) + yearOfCentury + (yearOfCentury / 4) + (century / 4) + (5 * century)) % 7 };
 
     //use of switch because I didnt used it in the rest of the code but the lab require it ....alternative to the code below
     /*switch (weekDay) {
-    case 1: return Weekday::Saturday;
-    case 2: return Weekday::Sunday;
-    case 3: return Weekday::Monday;
-    case 4: return Weekday::Tuesday;
-    case 5: return Weekday::Wednesday;
-    case 6: return Weekday::Thursday;
-    case 7: return Weekday::Friday;
+    case 0: return Weekday::Saturday;
+    case 1: return Weekday::Sunday;
+    case 2: return Weekday::Monday;
+    case 3: return Weekday::Tuesday;
+    case 4: return Weekday::Wednesday;
+    case 5: return Weekday::Thursday;
+    case 6: return Weekday::Friday;
     }*/
 
     return static_cast<Weekday>(weekDay);
