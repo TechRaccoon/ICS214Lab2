@@ -1,5 +1,7 @@
 #include <iostream>
 #include "TextInput.h"
+#include "Weekday.h"
+
 
 
 int main() {
