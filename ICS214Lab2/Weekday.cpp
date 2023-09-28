@@ -2,10 +2,10 @@
 #include "TextInput.h"
 
 
-//prompts the user for the year in int, returns it
+//prompts the user for the year in int range (0-9999), returns it
 int promptForYear() {
     std::cout << "Enter a year (e.g., 2012): ";
-    return getIntFromUser();
+    return getIntFromUserInRange(0, 9999);
 };
 
 //prompts the user for the month of the yea in int, returns it 
@@ -23,7 +23,7 @@ int promptForDayOfMonth() {
 //zellers formula to calculate the the specific day of the week given year, day and month 
 Weekday calculateWeekday(int month, int dayOfMonth, int year) {
 
-    int formulaMonth{ 0 };
+    int formulaMonth{ month };
     
     if (month < 3) {
         formulaMonth = month + 12;
